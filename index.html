@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body class="screen-main">
+        <div class="overlay-button-position">
+            <div class="overlay-button-container">
+                <button id="shutdown-button" class="custom-button white text-large text-flicker bg-red"><img src="img/power.svg" class="overlay-button-icon"></button>
+                <button id="restart-button" class="custom-button white text-large text-flicker bg-orange"><img src="img/restart.svg" class="overlay-button-icon"></button>
+                <button id="flicker-button" class="custom-button white text-large text-flicker bg-blue"><img src="img/screen.svg" class="overlay-button-icon"></button>
+                <!-- When i add audio <button id="mute-button" class="custom-button white text-large text-flicker bg-green">🔊</button> -->
+            </div>
+        </div>
+        <div class="screen-scanlines width-full" id="screen-scanlines"> 
+            <container id="shutdown-screen" class="shutdown-screen">
+                <div class="orange text-large">
+                    Shutting Down...
+                </div>
+            </container>
+            <container id="startup-screen" class="startup-screen">
+                <div class="orange text-large">
+                    Loading...
+                </div>
+            </container>
+            <container id="restart-screen" class="restart-screen">
+                <div class="orange text-large">
+                    Restarting...
+                </div>
+            </container>
+            <container id="boot-sequence-container">
+                <container id="bios-screen">
+                    <div class="bios-screen">
+                        <img src="img/logo.png" style="max-width:45%; max-height: 30%;"/>
+                        <p class="bios-text text-medium white white-glow">
+                            AMBIOS(C)2024 American Megatrends. Inc.<br><br>
+                            CPU: Intel(R) Core (TM) Celeron(R) Processor 266 MHz, 66 MHz FSB,<br>
+                            Total Memory: 67 MB <br>
+                            Detected ATA/ATAPI Devices... <br>
+                            SATA Port1: Compaq Presario 4GB HDD <br><br>
+                        </p>
+                        <a href="#" class="bios-text text-medium orange boot-button black-glow bold" id="bios-splash-text">
+                            Please Enter or Click Here to Continue
+                        </a>
+                    </div>
+                </container>
+                <container id="loading-screen" >
+                    <div class="loader-logo-container">
+                        <div class="loader-logo-row">
+                            <div class="loader-ms-green"></div>
+                            <div class="loader-ms-orange"></div>
+                        </div>
+                        <div class="loader-logo-row">
+                            <div class="loader-ms-blue"></div>
+                            <div class="loader-ms-yellow"></div>
+                        </div>
+                        <div>
+                            <span class="loader-osname text-large white text-flicker white-glow">asbed</span>
+                            <span class="loader-textflair text-medium orange bold">XP</span>
+                        </div>
+                        <span class="loader-subtitle text-small white text-flicker">
+                            Professional
+                        </span>
+                        <div class="loader-container">
+                            <div class="loader-box"></div>
+                            <div class="loader-box"></div>
+                            <div class="loader-box"></div>
+                        </div>
+                    </div>
+                </container>
+                <container id="login-container" >
+                    <div class="login-bg-solid"></div>
+                    <div class="login-highlightbar-horizontal"></div>
+                    <div class="login-bg-gradient">
+                        <div class="login-os-container">
+                            <div class="login-logo-container">
+                                <span class="login-osname text-large white text-flicker bold">asbed</span>
+                                <span class="text-medium bold orange">XP</span>
+                            </div>
+                            <span class="green text-small black-glow bold justify">
+                                Developer from Melbourne!
+                            </span>
+                            <span class="white black-glow ">
+                                This was one a fun little project I made in my early days of developement.
+                            </span>
+                        </div>
+                        <div class="login-highlightbar-vertical"></div>
+                        <div class="login-button-container text-medium">
+                            <a href="https://www.asbedb.dev/" target="_blank" class="login-button-background" >
+                                <img src="img/pfp.jpg" class="login-button-icon"/>
+                                Main Portfolo
+                            </a>
+                            <a href="https://github.com/asbedb" target="_blank" class="login-button-background">
+                                <img src="img/github.svg" class="login-button-icon"/>
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/asbed/" target="_blank" class="login-button-background">
+                                <img src="img/linkedin.svg" class="login-button-icon"/>
+                                LinkedIn
+                            </a>
+                            <a href="https://medium.com/@asbedb" target="_blank" class="login-button-background">
+                                <img src="img/medium.svg" class="login-button-icon"/>
+                                Medium
+                            </a>
+                            <a href="https://bsky.app/profile/asbedb.bsky.social" target="_blank" class="login-button-background">
+                                <img src="img/bsky.svg" class="login-button-icon"/>
+                                BlueSky
+                            </a>
+                        </div>
+                    </div>
+                    <div class="login-highlightbar-horizontal"></div>
+                    <div class="login-bg-solid"></div>
+                </container>
+            </container>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
