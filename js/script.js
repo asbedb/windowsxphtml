@@ -27,7 +27,7 @@ const continueLoad = () => {
     console.log("Now Booting AsbedOS (0_0)");
     if (biosSplash.style.display !== "none") {
         biosSplash.style.display = "none";
-        loadingScreen.style.display = ""; // Removed the semicolon inside the string
+        loadingScreen.style.display = ""; 
         setTimeout(() => {
             loadingScreen.style.display = "none";
             loginContainer.style.display = "";
@@ -46,21 +46,19 @@ const startUpSequence = () => {
     // Show the startup splash after a delay of 1 second
     setTimeout(() => {
         bootSequenceContainer.style.display = ""
-        startupSplash.style.display = "flex"; // Show startup splash
-        // After a brief delay (100ms), hide the startup splash and show the bios splash
+        startupSplash.style.display = "flex"; 
         setTimeout(() => {
             startupSplash.style.display = "none"; // Hide startup splash
             biosSplash.style.display = ""; // Show bios splash
             console.log("timed out, biosSplash now visible");
-        }, 1000); // Delay of 100ms
-    }, 1000); // Initial delay of 1 second
+        }, 1000); 
+    }, 1000); 
 };
 
 const shutDown = () => {
     if (bootSequenceContainer.style.display === "none") {
         startUpSequence();
     } else {
-        // Hide the element
         bootSequenceContainer.style.display = "none";
         shutdownSplash.style.display = "flex";
         setTimeout(() => {
@@ -73,7 +71,6 @@ const restart = () => {
     if (bootSequenceContainer.style.display === "none") {
         startUpSequence();
     } else {
-        // Hide the element
         bootSequenceContainer.style.display = "none";
         restartSplash.style.display = "flex";
         setTimeout(() => {
@@ -90,7 +87,7 @@ const restartMachine = () => {
             // Handle restarting the machine when the BIOS splash is visible
         }
         shutdownSplash.style.display = "none";
-        bootSequenceContainer.style.display = "flex"; // Show boot sequence container
+        bootSequenceContainer.style.display = "flex"; 
     }
 };
 
@@ -100,7 +97,7 @@ const toggleFlicker = () => {
     if (currentMaskImage === "none" || currentMaskImage === "") {
         scanLinesElement.style.maskImage = "linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))";
     } else {
-        scanLinesElement.style.maskImage = ""; // Clear the maskImage property
+        scanLinesElement.style.maskImage = ""; 
     }
 };
 
