@@ -1,4 +1,7 @@
 # windowsxphtml
+
+[Try it Here!](https://asbedb.github.io/windowsxphtml/)
+
 A fun little excercise replicating the Windows XP splash screen with HTML, CSS and JS
 
 I started this project fresh in August 2024 when I was first learning HTML and CSS.
